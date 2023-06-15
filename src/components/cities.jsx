@@ -1,6 +1,10 @@
+import Trabajando from '../images/iconoTrabajando.png';
+import '../styles/cities.css';
+
 function Cities(){
     return(
-        <div><p>Page Under construction</p></div>
+       <div className='CitiesContent'><img src={Trabajando} alt="emoticon" /></div>
+        
     )
 }
 

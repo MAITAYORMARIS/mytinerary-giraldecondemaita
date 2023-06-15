@@ -64,7 +64,7 @@
     right:5%;
     font-size: 41px;
   font-weight: bold;
-  color:orangered;
+  color:white;
   }
   .subtitle-slide-item{
     position:absolute;
@@ -94,6 +94,6 @@
     right: 0;
     width: 90%;
   height: 15%;
-  background-color: rgb(33, 32, 31);
+  background-color: rgb(235, 148, 61);
   transform: skewX(180deg);  
   }
