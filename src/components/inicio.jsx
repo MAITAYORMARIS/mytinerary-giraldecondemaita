@@ -4,8 +4,8 @@ import Carousel from "./carousel"
 function Inicio(){
     return(
         <div>
-            <Welcome/>
-            <Carousel/>
+            <Welcome />
+            <Carousel />
         </div>
     )
 }
