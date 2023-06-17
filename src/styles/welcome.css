@@ -1,11 +1,13 @@
 .welcome {
-    height: 500px;
+  
+    height: 560px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 100%;
-    margin-top: 7.5vh;
+    margin-top: 11vh;
+    padding-top: 20px;
 }
 
 .welcome>img {
@@ -14,39 +16,38 @@
     max-width: 100%;
     max-height: 100%;
 }
-.wrap {
-    height: 500px;
-    margin-top: 7.5vh;
-    width: auto;
+/* .wrap {
+    height: 550px;
+    position:relative;
+    top:0;
+    left:0;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    position: absolute;
-    top:0%;
-    left: 10%;
-  }
+    background-color: black;
+  } */
 
 
 .call {
-    width: 200px;
-  height: 60px;
-  font-size: 35px;
+  min-width: 300px;
+  min-height: 60px;
+  font-size: 25px;
   text-transform: uppercase;
   letter-spacing: 1.3px;
   font-weight: bolder;
-  color: #313133;
-  background: orangered;
-background: linear-gradient(90deg, rgba(129,230,217,1) 0%, rgba(79,209,197,1) 100%);
+  color: white;
+ background: rgb(217, 97, 6);
+background: linear-gradient(90deg, rgb(233, 114, 3) 0%, rgba(242, 172, 22, 0.769)100%);
   border: none;
   border-radius: 1000px;
-  box-shadow: 12px 12px 24px rgba(209, 170, 79, 0.64);
+  box-shadow: 12px 12px 24px #edd343d5;
   transition: all 0.3s ease-in-out 0s;
   cursor: pointer;
   outline: none;
   position: absolute;
-    top:30%;
-    left: 8%;
+    top: 50%;
+    left: 5%;
   padding: 10px;
 text-decoration: none;
 text-align: center;
@@ -56,10 +57,10 @@ text-align: center;
 .call::before {
     content: '';
   border-radius: 1000px;
-  min-width: calc(200px + 12px);
-  min-height: calc(60px + 12px);
-  border: 6px solid #00FFCB;
-  box-shadow: 0 0 60px rgba(255, 128, 0, 0.64);
+  min-width: calc(300px + 25px);
+  min-height: calc(60px + 25px);
+  border: 6px solid #ff6a00;
+  box-shadow: 0 0 70px rgba(82, 245, 213, 0.761);
   position: absolute;
   top: 50%;
   left: 50%;
@@ -69,7 +70,7 @@ text-align: center;
     }
     
     .call:hover, .call:focus {
-      color: #313133;
+      color: white;
       transform: translateY(-6px);
     }
     
@@ -97,13 +98,14 @@ text-align: center;
     
     @keyframes ring {
       0% {
-        width: 200px;
-        height: 100px;
+        width: 30px;
+        height: 30px;
         opacity: 1;
+        z-index: 1;
       }
       100% {
-        width: 200px;
-        height: 200px;
+        width: 300px;
+        height: 300px;
         opacity: 0;
       }
     }
