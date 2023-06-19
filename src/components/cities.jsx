@@ -1,4 +1,4 @@
-import Trabajando from '../images/iconoTrabajando.png';
+import Trabajando from '../images/working-on.gif';
 import '../styles/cities.css';
 
 function Cities(){
