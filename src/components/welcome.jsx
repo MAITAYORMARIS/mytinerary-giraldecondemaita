@@ -17,8 +17,8 @@ function Welcome() {
         designed by insiders who know and love their cities!</Typography></div>
 
 
-      <div><Button bsPrefix="call" as={Link} to='/cities'>Yes,Let's Go!!</Button>{''}</div>
-      <div className='subtContent'><Typography variant="h4">Do you dare to a new adventure?</Typography></div>
+      <div><Button bsPrefix="call" as={Link} to='/cities'>Want a New Adventure?</Button>{''}</div>
+      {/* <div className='subtContent'><Typography variant="h4">Do you dare to a new adventure?</Typography></div> */}
     </>
 
   )
