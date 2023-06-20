@@ -41,17 +41,42 @@ typography:{
     h2:{
         fontFamily:["'Mr Dafoe', cursive"],
         letterSpacing:"0.02em",
+        fontSize:"3rem", 
+        '@media (max-width:600px)': {
+            fontSize: '2.5rem',
+          },
+         
+          '@media (min-width:1280px)': {
+            fontSize: '4rem',
+          }, 
     },
     h3:{
         fontFamily:["'Fira Sans', sans-serif"],
         letterSpacing:"0.03em",
-        fontSize:"2.85rem",
         lineHeight:1.6,
-    fontWeight:600,    },
+        fontWeight:600, 
+        fontSize:"2.5rem", 
+        '@media (max-width:600px)': {
+            fontSize: '1.03rem',
+          },
+          '@media (min-width:601px) and (max-width:960px)': {
+            fontSize: '1.8rem',
+          }, 
+          '@media (min-width:1280px)': {
+            fontSize: '2.85rem',
+          },     
+       
+},
     h4:{
         fontFamily:["'Saira Extra Condensed', sans-serif"],
-        fontSize:"2rem",
         lineHeight:1.1,
+        fontSize:'2rem',
+        '@media (max-width:600px)': {
+            fontSize: '1.2rem',
+          },
+          '@media (min-width:1280px)': {
+            fontSize: '2.5rem',
+          },
     }
 
 }

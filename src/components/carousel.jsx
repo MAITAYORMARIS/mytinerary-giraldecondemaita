@@ -58,7 +58,7 @@ export default function Carousel() {
                     onAutoplayTimeLeft={onAutoplayTimeLeft}
                     className="mySwiper"
                 >
-                    <div>Titulo del Carousel</div>
+
                     <SwiperSlide>
                         <div className='slide-item'>
                             <div className="geometricA"></div>
