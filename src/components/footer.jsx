@@ -1,7 +1,52 @@
 import '../styles/footer.css';
+import '../components/nav'
+import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
+import { Link as LinkRouter } from 'react-router-dom';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import FacebookRoundedIcon from '@mui/icons-material/FacebookRounded';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import YouTubeIcon from '@mui/icons-material/YouTube';
+
+
 function Footer() {
+    const pages =
+    [{
+      name: 'Home',
+      path: '/home'
+    },
+    {
+      name: 'Cities',
+      path: '/cities'
+    },
+    {
+      name: 'Sign In',
+      path: '/signin'
+    }]
+    
     return (
         <footer>
+            <div class="nav">
+           
+            <Box className="nav-footer" sx={{ flexGrow: 1,}}>
+            {pages.map((page) => (
+              <Button
+                key={page.path}
+                
+                component={LinkRouter}
+                to={page.path}
+                sx={{ my: 2, color: 'white', display: 'block' }}
+              >
+                {page.name}
+              </Button>
+            ))
+          }
+          </Box>
+            
+                    
+                    
+            
+            </div>
 
             <div className="footer">
 
@@ -18,11 +63,12 @@ function Footer() {
                     <p>AUTONOMOUS CITY OF BUENOS AIRES, ARGENTINA</p>
                 </div>
             </div>
-            <div className="icons-rrss">
-                <button><i className="fa-brands fa-twitter"></i></button>
-                <button><i className="fa-brands fa-facebook-f"></i></button>
-                <button><i className="fa-brands fa-instagram"></i></button>
-                <button><i className="fa-brands fa-youtube"></i></button>
+
+            <div class="icons-rrss">
+                <TwitterIcon sx={{color: "white", fontSize: 40}}/>
+                <FacebookRoundedIcon  sx={{color: "white", fontSize: 40}} />
+                <InstagramIcon sx={{color: "white", fontSize: 40}}/>
+                <YouTubeIcon sx={{color: "white", fontSize: 40}}/>
             </div>
         </footer>
     )
