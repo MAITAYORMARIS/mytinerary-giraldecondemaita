@@ -1,8 +1,7 @@
 .welcome {
-  
-    height: 560px;
+    height: 70vh;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     width: 100%;
@@ -16,18 +15,33 @@
     max-width: 100%;
     max-height: 100%;
 }
-/* .wrap {
-    height: 550px;
-    position:relative;
-    top:0;
-    left:0;
+.textBanner{
+width: 30%;
+    height: 70vh;
+    position:absolute;
+    top:12%;
+    right: 15px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: black;
-  } */
-
+    text-align: center;
+    color:white;
+    text-transform: uppercase;
+  } 
+.subtContent{
+  width: 30%;
+    height: 550px;
+    position:absolute;
+    top:15%;
+    left: -15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color:white;
+}
 
 .call {
   min-width: 300px;
@@ -47,7 +61,7 @@ background: linear-gradient(90deg, rgb(233, 114, 3) 0%, rgba(242, 172, 22, 0.769
   outline: none;
   position: absolute;
     top: 50%;
-    left: 5%;
+    left: 7%;
   padding: 10px;
 text-decoration: none;
 text-align: center;

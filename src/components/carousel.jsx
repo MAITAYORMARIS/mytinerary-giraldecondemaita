@@ -1,3 +1,6 @@
+import {ThemeProvider} from '@mui/material/styles';
+import Theme from './themeConfig';
+
 import React, { useRef, useState } from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -23,6 +26,8 @@ import Paris from '../images/paris.jpg';
 
 // import required modules
 import { Autoplay, Pagination, Navigation } from 'swiper';
+import { Typography } from '@mui/material';
+import { Palette } from '@mui/icons-material';
 
 export default function Carousel() {
     const progressCircle = useRef(null);
@@ -33,8 +38,11 @@ export default function Carousel() {
     };
     return (
         <>
+        <ThemeProvider theme={Theme.palette}>
             <div className='carouselContain'>
-                <div className='carouselTittle'>Popular MYtineraries</div>
+                <div className='carouselTittle'>
+                    <Typography variant="h2" color="primary.dark">Popular MYtineraries</Typography>
+                </div>
                 <Swiper
                     spaceBetween={30}
                     centeredSlides={true}
@@ -156,7 +164,7 @@ export default function Carousel() {
 
 
             </div>
-
+            </ThemeProvider>
         </>
     );
 }
