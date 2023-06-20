@@ -75,16 +75,17 @@
   position: absolute;
   top: 1%;
   right: 5%;
-  font-size: 41px;
+  font-size: 23px;
   font-weight: bold;
   color: white;
+  font-family: 'Nanum Gothic';
 }
 
 .subtitle-slide-item {
   position: absolute;
   bottom: 15%;
   right: 1%;
-  font-size: 20px;
+  font-size: 16px;
   text-transform: uppercase;
   writing-mode: vertical-lr;
   transform: rotate(180deg);
@@ -108,9 +109,9 @@
   position: absolute;
   top: 0;
   right: 0;
-  width: 90%;
-  height: 15%;
-  background-color: rgb(235, 148, 61);
+  width: 93%;
+  height: 11%;
+  background-color: rgba(235, 148, 61, 0.652);
   transform: skewX(180deg);
 }
 
@@ -125,7 +126,7 @@
 
 @media screen and (max-width:600px) {
   .title-slide-item {
-    font-size: 18px
+    font-size: 15px
   }
 
   .subtitle-slide-item {
@@ -160,7 +161,7 @@
 
 @media screen and (min-width:601px) and (max-width:960px) {
   .title-slide-item {
-    font-size: 25px
+    font-size: 18px
   }
 
   .subtitle-slide-item {
@@ -190,9 +191,9 @@
   }
 }
 
-@media screen and (min-width:1280px) {
+@media screen and (min-width:1440px) {
   .title-slide-item {
-    font-size: 35px
+    font-size: 30px
   }
 
   .subtitle-slide-item {

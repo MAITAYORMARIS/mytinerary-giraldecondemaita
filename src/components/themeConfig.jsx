@@ -55,27 +55,27 @@ typography:{
         letterSpacing:"0.03em",
         lineHeight:1.6,
         fontWeight:600, 
-        fontSize:"2.5rem", 
+        fontSize:"2.1rem", 
         '@media (max-width:600px)': {
             fontSize: '1.03rem',
           },
           '@media (min-width:601px) and (max-width:960px)': {
             fontSize: '1.8rem',
           }, 
-          '@media (min-width:1280px)': {
-            fontSize: '2.85rem',
+          '@media (min-width:1440px)': {
+            fontSize: '2.5rem',
           },     
        
 },
     h4:{
         fontFamily:["'Saira Extra Condensed', sans-serif"],
         lineHeight:1.1,
-        fontSize:'2rem',
+        fontSize:'1.5rem',
         '@media (max-width:600px)': {
-            fontSize: '1.2rem',
+            fontSize: '1rem',
           },
-          '@media (min-width:1280px)': {
-            fontSize: '2.5rem',
+          '@media (min-width:1440px)': {
+            fontSize: '2rem',
           },
     }
 
