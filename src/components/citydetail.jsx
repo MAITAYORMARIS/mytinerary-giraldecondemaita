@@ -15,6 +15,7 @@ export default function CityDetail() {
             <Container maxWidth="xl" className="detailContain">
                 <Box
                     sx={{ minWidth: '100%', height: '70vh', textAlign: 'right' }} >
+                        {/* aca va la imagen de banner */}
                     <img className="titleImage" src="https://firebasestorage.googleapis.com/v0/b/mytinerary-6ce01.appspot.com/o/BUENOS%20AIRES%2FbuenosAires.jpg?alt=media&token=782ef8de-7d1c-45f8-b432-145098ad0777" alt="puerto madero" />
 
                 </Box>
