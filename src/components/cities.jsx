@@ -65,19 +65,3 @@ function Cities() {
 }
 
 export default Cities;
-
-
-        //     {cities.length > 0 ?
-        //         <ul>
-        //             {cities.map((city, index) =>
-        //                 <LinkRouter key={index} to='/city/'+ { city._id } >
-        //                 <li >{city.name}</li>
-        //                 </LinkRouter>
-        //             )}
-
-        // </ul>
-        //         : <h1>Loading</h1>
-
-
-
-        // <div className='CitiesContent'><img src={Trabajando} alt="emoticon" /></div>
