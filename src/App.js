@@ -17,7 +17,7 @@ function App() {
         <Route path="*" element={<Inicio />}></Route>
         <Route path='/home' element={<Inicio />}></Route>
         <Route path='/cities' element={<Cities />}></Route>
-        <Route path='/signin' element={<City />}></Route>
+        <Route path='/city/:id' element={<City />}></Route>
       </Routes >
       <Footer />
 
