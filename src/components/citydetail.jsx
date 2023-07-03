@@ -1,6 +1,14 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import LocalDiningIcon from '@mui/icons-material/LocalDining';
+import LocationOnIcon from '@mui/icons-material/LocationOn';
+import HotelIcon from '@mui/icons-material/Hotel';
+import SVGImage from '../images/img1.svg'
+import SVGImageTwo from '../images/img2.svg'
+import SVGImageThird from '../images/img3.svg'
+import Buttonback from './buttontohome'
+
 
 
 
@@ -34,26 +42,57 @@ export default function CityDetail() {
             <React.Fragment>
                 <CssBaseline />
 
-                <Container maxWidth="xl" className="detailContain">
+                <Container maxWidth="xl" className="detailContain" sx={{ padding: '0' }}>
                     {city.length > 0 ?
                         <>
-                            <Box
+                            <Box className="bannerCity"
                                 sx={{ minWidth: '100%', height: '70vh', textAlign: 'right' }} >
                                 {/* aca va la imagen de banner */}
-                                <img className="titleImage" src={city[0].image} alt="fotografia de" />
+                                <Box className="bannerContent"><img className="titleImage" src={city[0].banner} alt={city[0].name} /></Box>
+                                <Box className="curveOne"><img src={SVGImageTwo} className="SVGcolor" alt="irregularForm"></img></Box>
+                                <Box className="curveTwo"><img src={SVGImageThird} alt="irregularForm2"></img></Box>
+                                <Box className="curveThird"><img src={SVGImage} alt="irregularForm3"></img></Box>
                             </Box>
-                            <Box
-                                sx={{ width: '100%', height: 'auto', textAlign: 'right' }} >
+                            <Box className="tittleCity"
+                                sx={{ color: 'primary.main', width: '100%', height: 'auto', textAlign: 'right' }} >
 
-                                <Typography variant="h3">{city[0].name}</Typography>
+                                <Typography variant="h3" className="textEfect">{city[0].name}</Typography>
                                 <Typography variant="h4">{city[0].phrase}</Typography>
                             </Box>
-                            <Box sx={{ bgcolor: '#cfe8fc', height: '300px', marginTop: '60px' }}>
-                                <Typography>{city[0].info}</Typography>
+                            <Box sx={{ color: "secondary.dark" }}><Typography variant="h3">Discover {city[0].region}</Typography></Box>
+                            <Box className="infoCity" sx={{ height: 'auto', marginTop: '60px', width: '100%' }}>
+
+                                <Box className="data">
+                                    <Typography variant="h3">{city[0].info}</Typography>
+                                    <Typography>Country Oficial Name: {city[0].country}</Typography>
+                                    <Typography>Language: {city[0].language}</Typography>
+
+                                </Box>
+                                <Box className="galery">
+                                    <img className="galeryPic RotarIzq" src={city[0].galUno} alt="vista de la ciudad"></img>
+                                    <img className="galeryPic RotarDer" src={city[0].galDos} alt="vista de la ciudad"></img>
+                                    <img className="galeryPic RotarIzq" src={city[0].galTres} alt="vista de la ciudad"></img>
+                                    <Typography variant="h6" className="notes RotarIzq">My travel to {city[0].name}</Typography>
+                                </Box>
+                               
                             </Box>
-                            <Box sx={{ bgcolor: '#cfe8fc', height: '300px', marginTop: '60px' }}>
+                            <Box className="curveContent">
+                                    <Box className="curveOne"><img src={SVGImageTwo} className="SVGcolor" alt="irregularForm"></img></Box>
+                                    <Box className="curveTwo"><img src={SVGImageThird} alt="irregularForm2"></img></Box>
+                                    <Box className="curveThird"><img src={SVGImage} alt="irregularForm3"></img></Box>
+                                </Box>
+                            <Box sx={{ height: '300px', marginTop: '60px', width: '100%' }}>
                                 <Typography variant="h2" color="primary.main">Tour the City</Typography>
-                            </Box></>
+                                <Typography variant="h3" color="secondary.light">Activities</Typography>
+                                <Box className="activitiesContent">
+                                    <Box className="activities" sx={{ bgcolor: "primary.main", color: "primary.ligth" }}><LocalDiningIcon /></Box>
+                                    <Box className="activities" sx={{ bgcolor: "primary.main", color: "primary.ligth" }}><LocationOnIcon /></Box>
+                                    <Box className="activities" sx={{ bgcolor: "primary.main", color: "primary.ligth" }}><HotelIcon /></Box>
+
+                                </Box>
+                                <Typography variant="h4" color="secondary.light">UNDER CONSTRUCTION</Typography>
+                            </Box>
+                            <Box className="buttonBackContent"><Buttonback /></Box></>
 
                         : <h1>LOADING</h1>}
 
