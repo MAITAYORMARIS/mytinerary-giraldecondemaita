@@ -16,7 +16,7 @@ function Cities() {
     const [cities, setCities] = useState([])
     let citiesDB
     async function getData() {
-        citiesDB = await Axios.get("http://localhost:5000/api/cities")
+        citiesDB = await Axios.get("https://yormarismaita-api-cities-crud.onrender.com/api/cities")
 
         setCities(citiesDB.data.response.cities)
 

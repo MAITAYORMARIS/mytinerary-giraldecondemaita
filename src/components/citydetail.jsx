@@ -8,6 +8,7 @@ import SVGImage from '../images/img1.svg'
 import SVGImageTwo from '../images/img2.svg'
 import SVGImageThird from '../images/img3.svg'
 import Buttonback from './buttontohome'
+import Spinner from './chargeIcon'
 
 
 
@@ -29,7 +30,7 @@ export default function CityDetail() {
 
     async function getCity(id) {
         let cityDB
-        cityDB = await axios.get("http://localhost:5000/api/cities/" + id);
+        cityDB = await axios.get("https://yormarismaita-api-cities-crud.onrender.com/api/cities/" + id);
         console.log(cityDB);
         setCity(cityDB.data.response);
     }
@@ -59,6 +60,7 @@ export default function CityDetail() {
                                 <Typography variant="h3" className="textEfect">{city[0].name}</Typography>
                                 <Typography variant="h4">{city[0].phrase}</Typography>
                             </Box>
+                            <Box><Typography variant="h2" color="primary.main">Travel the World</Typography></Box>
                             <Box sx={{ color: "secondary.dark" }}><Typography variant="h3">Discover {city[0].region}</Typography></Box>
                             <Box className="infoCity" sx={{ height: 'auto', marginTop: '60px', width: '100%' }}>
 
@@ -94,7 +96,7 @@ export default function CityDetail() {
                             </Box>
                             <Box className="buttonBackContent"><Buttonback /></Box></>
 
-                        : <h1>LOADING</h1>}
+                        : <Spinner/>}
 
                 </Container>
             </React.Fragment>

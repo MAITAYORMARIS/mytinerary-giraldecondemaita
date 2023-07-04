@@ -100,10 +100,12 @@
     align-items: center;
     justify-content: center;
     margin-left: 10px;
+    position: relative;
+    bottom: 20px;
 }
 .galeryPic{
-width:70%;
-height: 200px;
+width:80%;
+height: 230px;
 background-color:white;
     padding:10px 10px 32px 10px;
     border:1px solid #BFBFBF;
