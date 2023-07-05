@@ -26,7 +26,7 @@ function Footer() {
     
     return (
         <footer>
-            <div class="nav">
+            <div className="nav">
            
             <Box className="nav-footer" sx={{ flexGrow: 1,}}>
             {pages.map((page) => (
@@ -64,7 +64,7 @@ function Footer() {
                 </div>
             </div>
 
-            <div class="icons-rrss">
+            <div className="icons-rrss">
                 <TwitterIcon sx={{color: "white", fontSize: 40}}/>
                 <FacebookRoundedIcon  sx={{color: "white", fontSize: 40}} />
                 <InstagramIcon sx={{color: "white", fontSize: 40}}/>

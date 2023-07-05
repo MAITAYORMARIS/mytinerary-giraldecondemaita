@@ -6,6 +6,8 @@ function Inicio(){
         <div>
             <Welcome />
             <Carousel />
+           
+
         </div>
     )
 }

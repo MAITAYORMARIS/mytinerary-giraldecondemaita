@@ -77,7 +77,18 @@ typography:{
           '@media (min-width:1440px)': {
             fontSize: '2rem',
           },
-    }
+    },
+    h6:{
+      fontFamily:["'La Belle Aurore', cursive"],
+      lineHeight:0.9,
+      fontSize:'1rem',
+      '@media (max-width:600px)': {
+          fontSize: '0.8rem',
+        },
+        '@media (min-width:1440px)': {
+          fontSize: '1.2rem',
+        },
+  }
 
 }
 });

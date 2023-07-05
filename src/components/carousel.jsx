@@ -27,7 +27,7 @@ import Paris from '../images/paris.jpg';
 // import required modules
 import { Autoplay, Pagination, Navigation } from 'swiper';
 import { Typography } from '@mui/material';
-import { Palette } from '@mui/icons-material';
+// import { Palette } from '@mui/icons-material';
 
 export default function Carousel() {
     const progressCircle = useRef(null);
@@ -96,7 +96,7 @@ export default function Carousel() {
                                 <div className="geometricA"></div>
                                 <div className="geometricB"></div>
                                 <div className="title-slide-item">Nigth City Tour</div>
-                                <div className="subtitle-slide-item">Singapur: Singapur</div>
+                                <div className="subtitle-slide-item">Singapore: Singapore</div>
                                 <img alt="Singapur" src={Singapur} />
                             </div>
                             <div className='slide-item'>

@@ -1,0 +1,21 @@
+.btn {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: rgba(128, 128, 128, 0.794);
+    border:none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.btn:hover{
+    content: 'Back to cities';
+}
+/* .btn::after {
+    content: '';
+}
+
+.btn::before {
+    content: '';
+} */
