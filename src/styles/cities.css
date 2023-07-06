@@ -1,4 +1,21 @@
-.CitiesContent{
+.bannerSearch{
+    width:100%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   margin-top:12vh;
+    margin-bottom: 50px;
+  background-color: #ff6d00;
+  color: white;
+ 
+}
+.form-control .me-2{
+    height: 30px;
+    width: 80%;
+}
+.cities{
     width:100%;
     height: auto;
     display: flex;
@@ -6,4 +23,23 @@
     justify-content: center;
     align-items: center;
     margin-top: 10%;
+    flex-wrap: wrap;
+}
+.contCard{
+    width:100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 10%;
+    row-gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+    
+}
+
+.contCard>img{
+    display: flex;
+    justify-content: flex-end;
 }

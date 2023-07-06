@@ -10,7 +10,7 @@ function CircularProgressWithLabel(props) {
       <CircularProgress variant="determinate" {...props} />
       <Box
         sx={{
-          top: '50px',
+          top: '150px',
           left: 0,
           bottom: '100px',
           right: 0,
