@@ -4,26 +4,28 @@ import Trabajando from '../images/working-on.gif';
 import '../styles/cities.css';
 import Axios from "axios";
 import { Link as LinkRouter } from 'react-router-dom';
-
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import Form from 'react-bootstrap/Form';
+// import Form from 'react-bootstrap/Form';
 
 
 function Cities() {
+    
     const [cities, setCities] = useState([])
-    const [arrayAFiltrar, setAFiltrar] = useState([])
+    const [arrayAFiltrar, setArrayAFiltrar] = useState([])
     const [search, setSearch] = useState("")
+   
+    
     let citiesDB
     async function getData() {
         citiesDB = await Axios.get("https://yormarismaita-api-cities-crud.onrender.com/api/cities")
 
         setCities(citiesDB.data.response.cities)
-        setAFiltrar(citiesDB.data.response.cities)
+        setArrayAFiltrar(citiesDB.data.response.cities)
     }
     useEffect(() => {
         getData()
