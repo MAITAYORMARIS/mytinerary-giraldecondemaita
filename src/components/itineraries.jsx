@@ -76,14 +76,14 @@ export default function ItinerariesList() {
                                             </Box>
                                             <Box className="dataDetail">
                                                 <Typography>Duration:</Typography>
-                                                <Typography>{itinerary.duration} hours</Typography>
+                                                <Typography>{itinerary.duration} </Typography>
                                             </Box>
                                         </Box>
                                         <Box className="secondData">
                                             <Box className='Side'>
                                                 <Box className="secondDataContent">
                                                     <Box className='secondDataHead' sx={{ bgcolor: 'secondary.main' }}><Typography>Transportation</Typography></Box>
-                                                    <div className="dataTwo"><Typography>{itinerary.transportation} Transport by bus</Typography></div>
+                                                    <div className="dataTwo"><Typography>{itinerary.transportation}</Typography></div>
                                                 </Box>
                                                 <Box className="secondDataContent">
                                                     <Box className='secondDataHead' sx={{ bgcolor: 'secondary.main' }}><Typography>Places To Visit</Typography></Box>
