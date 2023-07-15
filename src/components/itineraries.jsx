@@ -14,7 +14,7 @@ import Container from '@mui/material/Container';
 import "../styles/itineraries.css"
 import Likes from "./likes"
 import Avatar from '@mui/material/Avatar';
-
+import PriceContent from './itineraryPrice'
 
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
@@ -62,7 +62,8 @@ export default function ItinerariesList() {
                                         <Box className="contentHead">
                                             <Typography variant="h2" color="primary.main">Travel Itinerary</Typography>
                                             <Typography variant="h3" sx={{ color: "secondary.dark" }}>{itinerary.name}</Typography>
-                                            <Typography variant="h4" sx={{ color: "primary.dark" }}>Just by: ${itinerary.price}</Typography>
+                                            <Typography variant="h4" sx={{ color: "primary.dark" }}>Go to this adventure Just by: </Typography>
+                                            <PriceContent price={itinerary.price}/> 
 
                                         </Box>
                                     </Box>
