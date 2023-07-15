@@ -6,6 +6,7 @@
     align-items: center;
     text-align: center;
     padding: 0;
+    margin-bottom: 10vh;
 }
 .bannerCity{
     width: 100%;
@@ -93,7 +94,7 @@
     text-align: justify;
 }
 .galery{
-    width: 40%;
+    width: 30%;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -105,11 +106,19 @@
 }
 .galeryPic{
 width:80%;
-height: 230px;
+height: 300px;
 background-color:white;
-    padding:10px 10px 32px 10px;
+/* padding:15px 15px 10px 15px; */
     border:1px solid #BFBFBF;
     box-shadow:5px 5px 10px rgba(0, 0, 0, 0.8);
+}
+.galeryPic>img{
+    width: 90%;
+    height: 80%;
+    max-width: 90%;
+    max-height: 80%;
+    margin-top: 15px;
+    
 }
 .RotarIzq {
     transform:rotate(10deg);
@@ -125,10 +134,11 @@ background-color:white;
 }
 .notes{
     font-family: cursive;
-    font-size: 7px;
+    font-weight: bold;
+    font-size: 10px;
     display: block;
     position: relative;
-    bottom: 20px;
+    bottom: -40px;
 }
 .activitiesContent{
     width: 100%;
@@ -152,4 +162,10 @@ background-color:white;
     position: fixed;
     bottom: 5vh;
     right: 10px;
+}
+
+.itinerariesContent{
+    margin-top: 50px;
+    margin-bottom: 80px;
+    display: flex;
 }

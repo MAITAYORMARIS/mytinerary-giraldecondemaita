@@ -9,6 +9,8 @@ import SVGImageTwo from '../images/img2.svg'
 import SVGImageThird from '../images/img3.svg'
 import Buttonback from './buttontohome'
 import Spinner from './chargeIcon'
+import { Link as LinkRouter } from 'react-router-dom';
+import Button from '@mui/material/Button';
 
 
 
@@ -71,10 +73,11 @@ export default function CityDetail() {
 
                                 </Box>
                                 <Box className="galery">
-                                    <img className="galeryPic RotarIzq" src={city[0].galUno} alt="vista de la ciudad"></img>
-                                    <img className="galeryPic RotarDer" src={city[0].galDos} alt="vista de la ciudad"></img>
-                                    <img className="galeryPic RotarIzq" src={city[0].galTres} alt="vista de la ciudad"></img>
-                                    <Typography variant="h6" className="notes RotarIzq">My travel to {city[0].name}</Typography>
+                                    <div className="galeryPic RotarIzq"><img  src={city[0].galUno} alt="vista de la ciudad"></img></div>
+                                
+                                    <div className="galeryPic RotarDer"><img  src={city[0].galDos} alt="vista de la ciudad"></img></div>
+                                    <div className="galeryPic RotarIzq"><img  src={city[0].galTres} alt="vista de la ciudad"></img>
+                                    <Typography variant="h6" className="notes">My travel to {city[0].name}</Typography></div>
                                 </Box>
                                
                             </Box>
@@ -85,14 +88,13 @@ export default function CityDetail() {
                                 </Box>
                             <Box sx={{ height: '300px', marginTop: '60px', width: '100%' }}>
                                 <Typography variant="h2" color="primary.main">Tour the City</Typography>
-                                <Typography variant="h3" color="secondary.light">Activities</Typography>
-                                <Box className="activitiesContent">
-                                    <Box className="activities" sx={{ bgcolor: "primary.main", color: "primary.ligth" }}><LocalDiningIcon /></Box>
-                                    <Box className="activities" sx={{ bgcolor: "primary.main", color: "primary.ligth" }}><LocationOnIcon /></Box>
-                                    <Box className="activities" sx={{ bgcolor: "primary.main", color: "primary.ligth" }}><HotelIcon /></Box>
-
-                                </Box>
-                                <Typography variant="h4" color="secondary.light">UNDER CONSTRUCTION</Typography>
+                                <Typography variant="h3" color="secondary.light">Go to Know the Itineraries that other travelers recommend</Typography>
+                                <LinkRouter to={'/itineraries/cities/' + city[0]._id}>
+                                    <Button size="small">Watch Itineraries</Button>
+                                </LinkRouter>
+                                
+                                {/* <Typography variant="h4" color="secondary.light">UNDER CONSTRUCTION</Typography> */}
+                           
                             </Box>
                             <Box className="buttonBackContent"><Buttonback /></Box></>
 

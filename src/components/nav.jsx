@@ -17,18 +17,12 @@ import { Link as LinkRouter } from 'react-router-dom';
 
 
 const pages =
-  [{
-    name: 'Home',
-    path: '/home'
-  },
+  [
   {
     name: 'Cities',
     path: '/cities'
-  },
-  {
-    name: 'Sign In',
-    path: '/signin'
-  }]
+  }
+  ]
 const settings = ['Sign In', 'LogIn', 'Logout'];
 
 function NavBar() {
