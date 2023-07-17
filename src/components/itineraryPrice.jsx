@@ -1,10 +1,7 @@
 import * as React from 'react';
 import { ThemeProvider } from '@mui/material/styles';
 import Theme from './themeConfig';
-import MoneyIcon from '@mui/icons-material/Money';
 import IconMoneyBill1Wave from './iconmoney'
-
-
 
 export default function ItineraryPrice(props) {
 
