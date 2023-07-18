@@ -3,7 +3,7 @@ body {
   box-sizing: border-box;
   padding: 0;
   font-family: 'Fira Sans', 'Mr Dafoe', 'Nanum Gothic','La Belle Aurore', 
-    'Saira Extra Condensed',cursive,sans-serif;
+    'Saira Extra Condensed','Marcellus SC', serif,cursive,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -12,3 +12,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+/* font-family: 'Fira Sans', sans-serif;
+font-family: 'La Belle Aurore', cursive;
+font-family: 'Marcellus SC', serif;
+font-family: 'Mr Dafoe', cursive;
+font-family: 'Nanum Gothic', sans-serif;
+font-family: 'Saira Extra Condensed', sans-serif; */

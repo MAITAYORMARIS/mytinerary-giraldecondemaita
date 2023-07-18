@@ -73,8 +73,8 @@ export default function CityDetail() {
 
                                 <Box className="data">
                                     <Typography variant="h3">{city[0].info}</Typography>
-                                    <Typography>Country Oficial Name: {city[0].country}</Typography>
-                                    <Typography>Language: {city[0].language}</Typography>
+                                    <Typography variant="h5">Country Oficial Name: {city[0].country} </Typography>
+                                    <Typography variant="h5">Language: {city[0].language}</Typography>
 
                                 </Box>
                                 <Box className="galery">

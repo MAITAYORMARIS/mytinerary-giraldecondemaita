@@ -51,11 +51,11 @@ typography:{
           }, 
     },
     h3:{
-        fontFamily:["'Fira Sans', sans-serif"],
+        fontFamily:["'Nanum Gothic', sans-serif"],
         letterSpacing:"0.03em",
         lineHeight:1.6,
-        fontWeight:600, 
-        fontSize:"2.1rem", 
+        fontWeight:500, 
+        fontSize:"2rem", 
         '@media (max-width:600px)': {
             fontSize: '1.03rem',
           },
@@ -78,6 +78,23 @@ typography:{
             fontSize: '2rem',
           },
     },
+    h5:{
+      fontFamily:["'Nanum Gothic', sans-serif"],
+      letterSpacing:"0.02em",
+      lineHeight:1.3,
+      fontWeight:400, 
+      fontSize:"1.6rem", 
+      '@media (max-width:600px)': {
+          fontSize: '1.03rem',
+        },
+        '@media (min-width:601px) and (max-width:960px)': {
+          fontSize: '1.8rem',
+        }, 
+        '@media (min-width:1440px)': {
+          fontSize: '2.5rem',
+        },     
+     
+},
     h6:{
       fontFamily:["'La Belle Aurore', cursive"],
       lineHeight:0.9,

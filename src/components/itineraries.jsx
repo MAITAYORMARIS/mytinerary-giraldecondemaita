@@ -76,7 +76,7 @@ export default function ItinerariesList() {
                                     >
                                         <Typography variant="body2" color="ffffff">{itinerary.name}</Typography>
                                     </AccordionSummary>
-                                    <AccordionDetails sx={{ bgcolor: '#e0dc8d86', paddingTop: '5vh' }}>
+                                    <AccordionDetails sx={{ bgcolor: '#f9fbe7', paddingTop: '5vh' }}>
                                         <Box className="itineraryHead" sx={{ bgcolor: 'primary.ligth' }}>
                                             <Box className="imageHead"><img className="galeryPic RotarDer" src={itinerary.image} alt={itinerary.name}></img></Box>
                                             <Box className="contentHead">

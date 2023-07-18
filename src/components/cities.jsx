@@ -12,6 +12,7 @@ import Box from '@mui/material/Box';
 import SearchInput from './searchCities';
 import { useSelector, useDispatch } from 'react-redux';
 import citiesActions from '../reduxContext/actions/citiesActions';
+import Wait from './buttonCall'
 
 
 function Cities() {
@@ -28,6 +29,7 @@ function Cities() {
 
     return (
         <>
+        <Box className="citiesContent">
             <Box className="bannerSearch">
                 <Typography variant="h3">The World awaits</Typography>
                 <Typography variant="h4">Find your next destination</Typography>
@@ -60,9 +62,10 @@ function Cities() {
                             </CardActions>
                         </Card>)}
                     )
-                    : <h1>Loading</h1>
+                    : <Wait></Wait>
                     }
                 </div >
+                </Box>
 
 
         </>
