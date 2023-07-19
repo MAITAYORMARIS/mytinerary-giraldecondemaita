@@ -9,6 +9,9 @@ import SVGImageTwo from '../images/img2.svg'
 import SVGImageThird from '../images/img3.svg'
 import Buttonback from './buttontohome'
 import Spinner from './chargeIcon'
+import { Link as LinkRouter } from 'react-router-dom';
+import Button from '@mui/material/Button';
+import Banner from './cityBanner'
 
 
 
@@ -26,6 +29,7 @@ import Theme from './themeConfig';
 export default function CityDetail() {
     const [city, setCity] = useState([])
 
+
     const { id } = useParams()
 
     async function getCity(id) {
@@ -38,6 +42,8 @@ export default function CityDetail() {
         getCity(id)
     }, [])
 
+
+
     return (
         <ThemeProvider theme={Theme.palette}>
             <React.Fragment>
@@ -46,14 +52,15 @@ export default function CityDetail() {
                 <Container maxWidth="xl" className="detailContain" sx={{ padding: '0' }}>
                     {city.length > 0 ?
                         <>
-                            <Box className="bannerCity"
+                            {/* <Box className="bannerCity"
                                 sx={{ minWidth: '100%', height: '70vh', textAlign: 'right' }} >
-                                {/* aca va la imagen de banner */}
+                                
                                 <Box className="bannerContent"><img className="titleImage" src={city[0].banner} alt={city[0].name} /></Box>
                                 <Box className="curveOne"><img src={SVGImageTwo} className="SVGcolor" alt="irregularForm"></img></Box>
                                 <Box className="curveTwo"><img src={SVGImageThird} alt="irregularForm2"></img></Box>
                                 <Box className="curveThird"><img src={SVGImage} alt="irregularForm3"></img></Box>
-                            </Box>
+                            </Box> */}
+                            <Banner city={city[0]} />
                             <Box className="tittleCity"
                                 sx={{ color: 'primary.main', width: '100%', height: 'auto', textAlign: 'right' }} >
 
@@ -66,37 +73,38 @@ export default function CityDetail() {
 
                                 <Box className="data">
                                     <Typography variant="h3">{city[0].info}</Typography>
-                                    <Typography>Country Oficial Name: {city[0].country}</Typography>
-                                    <Typography>Language: {city[0].language}</Typography>
+                                    <Typography variant="h5">Country Oficial Name: {city[0].country} </Typography>
+                                    <Typography variant="h5">Language: {city[0].language}</Typography>
 
                                 </Box>
                                 <Box className="galery">
-                                    <img className="galeryPic RotarIzq" src={city[0].galUno} alt="vista de la ciudad"></img>
-                                    <img className="galeryPic RotarDer" src={city[0].galDos} alt="vista de la ciudad"></img>
-                                    <img className="galeryPic RotarIzq" src={city[0].galTres} alt="vista de la ciudad"></img>
-                                    <Typography variant="h6" className="notes RotarIzq">My travel to {city[0].name}</Typography>
+                                    <div className="galeryPic RotarIzq"><img src={city[0].galUno} alt="vista de la ciudad"></img></div>
+
+                                    <div className="galeryPic RotarDer galDos"><img src={city[0].galDos} alt="vista de la ciudad"></img></div>
+
+                                    <div className="galeryPic RotarIzq galTres"><img src={city[0].galTres} alt="vista de la ciudad"></img>
+                                        <Typography variant="h6" className="notes">My travel to {city[0].name}</Typography></div>
                                 </Box>
-                               
+
                             </Box>
                             <Box className="curveContent">
-                                    <Box className="curveOne"><img src={SVGImageTwo} className="SVGcolor" alt="irregularForm"></img></Box>
-                                    <Box className="curveTwo"><img src={SVGImageThird} alt="irregularForm2"></img></Box>
-                                    <Box className="curveThird"><img src={SVGImage} alt="irregularForm3"></img></Box>
-                                </Box>
+                                <Box className="curveOne"><img src={SVGImageTwo} className="SVGcolor" alt="irregularForm"></img></Box>
+                                <Box className="curveTwo"><img src={SVGImageThird} alt="irregularForm2"></img></Box>
+                                <Box className="curveThird"><img src={SVGImage} alt="irregularForm3"></img></Box>
+                            </Box>
                             <Box sx={{ height: '300px', marginTop: '60px', width: '100%' }}>
                                 <Typography variant="h2" color="primary.main">Tour the City</Typography>
-                                <Typography variant="h3" color="secondary.light">Activities</Typography>
-                                <Box className="activitiesContent">
-                                    <Box className="activities" sx={{ bgcolor: "primary.main", color: "primary.ligth" }}><LocalDiningIcon /></Box>
-                                    <Box className="activities" sx={{ bgcolor: "primary.main", color: "primary.ligth" }}><LocationOnIcon /></Box>
-                                    <Box className="activities" sx={{ bgcolor: "primary.main", color: "primary.ligth" }}><HotelIcon /></Box>
+                                <Typography variant="h3" color="secondary.light">Go to Know the Itineraries that other travelers recommend</Typography>
+                                <LinkRouter to={'/itineraries/cities/' + city[0]._id}>
+                                    <Button size="small">Watch Itineraries</Button>
+                                </LinkRouter>
 
-                                </Box>
-                                <Typography variant="h4" color="secondary.light">UNDER CONSTRUCTION</Typography>
+                                {/* <Typography variant="h4" color="secondary.light">UNDER CONSTRUCTION</Typography> */}
+
                             </Box>
-                            <Box className="buttonBackContent"><Buttonback /></Box></>
+                            <Box className="buttonBackContent"><Buttonback navigate={'/cities'} /></Box></>
 
-                        : <Spinner/>}
+                        : <Spinner />}
 
                 </Container>
             </React.Fragment>

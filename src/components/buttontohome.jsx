@@ -4,9 +4,10 @@ import Button from 'react-bootstrap/Button';
 import '../styles/buttonBack.css';
 import FastRewindTwoToneIcon from '@mui/icons-material/FastRewindTwoTone';
 
-function ButtonToHome(){
+function ButtonToHome(props){
+    console.log(props)
 return(
-    <Button bsPrefix="btn" as={Link} to='/cities'><FastRewindTwoToneIcon /></Button>
+    <Button bsPrefix="btn" as={Link} to={props.navigate}><FastRewindTwoToneIcon /></Button>
 )
 }
 
