@@ -102,7 +102,7 @@ export default function CityDetail() {
                                 {/* <Typography variant="h4" color="secondary.light">UNDER CONSTRUCTION</Typography> */}
 
                             </Box>
-                            <Box className="buttonBackContent"><Buttonback /></Box></>
+                            <Box className="buttonBackContent"><Buttonback navigate={'/cities'} /></Box></>
 
                         : <Spinner />}
 

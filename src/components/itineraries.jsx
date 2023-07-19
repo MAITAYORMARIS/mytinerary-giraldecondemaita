@@ -18,7 +18,7 @@ import Suitcase from '../images/maletas.png'
 import Direction from '../images/brujula.png'
 import Plane from '../images/de-viaje.png'
 import Line from '../images/flecha-curva-con-linea-discontinua.png'
-
+import Loading from './buttonCall'
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
@@ -26,6 +26,8 @@ import axios from "axios";
 export default function ItinerariesList() {
     const [itineraries, setItineraries] = useState([])
     const [city, setCity] = useState([])
+    const [loading, setLoading] = useState(true)
+
 
     const { id } = useParams()
 
@@ -37,16 +39,37 @@ export default function ItinerariesList() {
     }
 
     async function getItineraries(id) {
+        
         let itinerariesDB
         itinerariesDB = await axios("https://yormaris-maita-api-itineraries-crud.onrender.com/api/itineraries/cities/" + id);
         console.log(itinerariesDB);
         setItineraries(itinerariesDB.data.response.itineraries);
+      
 
     }
     useEffect(() => {
         getItineraries(id)
         getCityData(id)
+        fetchData();
     }, [])
+
+    const fetchData = async () => {
+        try {
+            setLoading(true); // Establece el estado de carga en true antes de obtener los datos
+
+            await Promise.all([getItineraries(id), getCityData(id)]);
+
+            setLoading(false); // Establece el estado de carga en false una vez que se hayan obtenido los datos
+        } catch (error) {
+            // Maneja los errores si es necesario
+            setLoading(false); // Asegúrate de establecer el estado de carga en false en caso de errores también
+        }
+    };
+
+    // useEffect(() => {
+    //     fetchData();
+    // }, [id]);
+
 
 
     return (
@@ -61,10 +84,11 @@ export default function ItinerariesList() {
                 <Typography variant="h3"sx={{ color: "secondary.dark" }}> the best to see and visit</Typography>
                 <Typography sx={{ color: "primary.dark"}}> Traveling is the only thing you buy and it makes you richer</Typography>
                 </Box>
-                
-                {itineraries.length > 0 ?
+                {loading?(<Loading sx={{ marginTop: '12vh' }}/>)
+                :
+                itineraries.length > 0 ?
 
-                    itineraries.map((itinerary, index) => {
+                    (itineraries.map((itinerary, index) => {
 
                         return (
                             <>
@@ -147,14 +171,14 @@ export default function ItinerariesList() {
                                         </Box>
                                     </AccordionDetails>
                                 </Accordion>
-                                < Box className="buttonBackContent"><Buttonback /></Box></>
+                                < Box className="buttonBackContent" key={index+1} ><Buttonback navigate={'/city/'+id}/></Box></>
                         )
 
-                    }
-                    )
+                    }))
+                    
 
                     :
-                    <Typography variant="h4" color="secondary.light">This City has not Itineraries Jet</Typography>
+                    <Typography variant="h2" color="secondary.light">This City has not Itineraries Jet</Typography>
                 }
 
             </Container >
