@@ -8,7 +8,7 @@ import SVGImage from '../images/img1.svg'
 import SVGImageTwo from '../images/img2.svg'
 import SVGImageThird from '../images/img3.svg'
 import Buttonback from './buttontohome'
-import Spinner from './chargeIcon'
+import Loading from './buttonCall'
 import { Link as LinkRouter } from 'react-router-dom';
 import Button from '@mui/material/Button';
 import Banner from './cityBanner'
@@ -104,7 +104,7 @@ export default function CityDetail() {
                             </Box>
                             <Box className="buttonBackContent"><Buttonback navigate={'/cities'} /></Box></>
 
-                        : <Spinner />}
+                        : <Loading text={"Searching more info from this city"} />}
 
                 </Container>
             </React.Fragment>

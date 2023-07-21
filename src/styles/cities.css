@@ -7,19 +7,20 @@
     align-items: center;
    margin-top:12vh;
     margin-bottom: 50px;
+   
 }
 .bannerSearch{
     width:100%;
-    height: 200px;
+    height: 250px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-   /* margin-top:12vh; */
     margin-bottom: 50px;
-  background-color: #ff6d00;
   color: white;
- 
+  background-image: url(https://firebasestorage.googleapis.com/v0/b/mytinerary-6ce01.appspot.com/o/banner%20cities%2F4.png?alt=media&token=86e5b0a1-eaa8-4647-aedd-5875d492b5cf);
+  background-repeat: no-repeat;
+  background-size: cover; 
 }
 .form-control .me-2{
     height: 30px;

@@ -39,12 +39,12 @@ export default function ItinerariesList() {
     }
 
     async function getItineraries(id) {
-        
+
         let itinerariesDB
         itinerariesDB = await axios("https://yormaris-maita-api-itineraries-crud.onrender.com/api/itineraries/cities/" + id);
         console.log(itinerariesDB);
         setItineraries(itinerariesDB.data.response.itineraries);
-      
+
 
     }
     useEffect(() => {
@@ -79,106 +79,110 @@ export default function ItinerariesList() {
 
                 <Banner city={city} />
                 <Box className="preview">
-                <Typography variant="h2" color="primary.main">Tour {city.name}</Typography>
-                <Typography variant="h3"sx={{ color: "secondary.dark" }}> Lovers of this city recommend </Typography>
-                <Typography variant="h3"sx={{ color: "secondary.dark" }}> the best to see and visit</Typography>
-                <Typography sx={{ color: "primary.dark"}}> Traveling is the only thing you buy and it makes you richer</Typography>
+                    <Typography variant="h2" color="primary.main">Tour {city.name}</Typography>
+                    <Typography variant="h3" sx={{ color: "secondary.dark" }}> Lovers of this city recommend </Typography>
+                    <Typography variant="h3" sx={{ color: "secondary.dark" }}> the best to see and visit</Typography>
+                    <Typography sx={{ color: "primary.dark" }}> Traveling is the only thing you buy and it makes you richer</Typography>
                 </Box>
-                {loading?(<Loading sx={{ marginTop: '12vh' }}/>)
-                :
-                itineraries.length > 0 ?
+                {loading ? (<Loading sx={{ marginTop: '12vh' }} text={"Looking itineraries from travelers"} />)
+                    :
+                    itineraries.length > 0 ?
 
-                    (itineraries.map((itinerary, index) => {
+                        (itineraries.map((itinerary, index) => {
 
-                        return (
-                            <>
-                                <Accordion key={index} >
-                                    <AccordionSummary sx={{ bgcolor: 'primary.light' }}
-                                        expandIcon={<ExpandMoreIcon />}
-                                        aria-controls="panel1a-content"
-                                        id="panel1a-header"
-                                    >
-                                        <Typography variant="body2" color="ffffff">{itinerary.name}</Typography>
-                                    </AccordionSummary>
-                                    <AccordionDetails sx={{ bgcolor: '#f9fbe7', paddingTop: '5vh' }}>
-                                        <Box className="itineraryHead" sx={{ bgcolor: 'primary.ligth' }}>
-                                            <Box className="imageHead"><img className="galeryPic RotarDer" src={itinerary.image} alt={itinerary.name}></img></Box>
-                                            <Box className="contentHead">
-                                                <Typography variant="h2" color="primary.main">Travel Itinerary</Typography>
-                                                <Typography variant="h3" sx={{ color: "secondary.dark" }}>{itinerary.name}</Typography>
-                                                <Typography sx={{ color: "primary.dark" }}>Go to this adventure Just by: </Typography>
-                                                <PriceContent price={itinerary.price} />
+                            return (
+                                <>
+                                    <Accordion key={index} >
+                                        <AccordionSummary sx={{ bgcolor: 'primary.light' }}
+                                            expandIcon={<ExpandMoreIcon />}
+                                            aria-controls="panel1a-content"
+                                            id="panel1a-header"
+                                        >
+                                            <Typography variant="body2" color="ffffff">{itinerary.name}</Typography>
+                                        </AccordionSummary>
+                                        <AccordionDetails sx={{ bgcolor: '#f9fbe7', paddingTop: '5vh' }}>
+                                            <Box className="itineraryHead" sx={{ bgcolor: 'primary.ligth' }}>
+                                                <Box className="imageHead"><img className="galeryPic RotarDer" src={itinerary.image} alt={itinerary.name}></img></Box>
+                                                <Box className="contentHead">
+                                                    <Typography variant="h2" color="primary.main">Travel Itinerary</Typography>
+                                                    <Typography variant="h3" sx={{ color: "secondary.dark" }}>{itinerary.name}</Typography>
 
-                                            </Box>
-                                            <Box className='imageLine'><img src={Line} alt='line curve icon' /></Box>
-                                            <Box className='imageDirection'><img src={Direction} alt='compass icon' /></Box>
-                                            <Box className='imagePlane'><img src={Plane} alt='plane icon' /></Box>
-                                        </Box>
-                                        <Box className="itineraryBody">
-                                            <Box className="itInfo"><Typography>{itinerary.description}</Typography></Box>
-                                            <Box className="basicData">
-                                                <Box className="dataDetail">
-                                                    <Typography>Origin:</Typography>
-                                                    <Typography>{itinerary.origen}</Typography>
+
+
                                                 </Box>
-                                                <Box className="dataDetail">
-                                                    <Typography>Duration:</Typography>
-                                                    <Typography>{itinerary.duration} </Typography>
-                                                </Box>
+                                                <Box className='imageLine'><img src={Line} alt='line curve icon' /></Box>
+                                                <Box className='imageDirection'><img src={Direction} alt='compass icon' /></Box>
+                                                <Box className='imagePlane'><img src={Plane} alt='plane icon' /></Box>
                                             </Box>
-                                            <Box className="secondData">
-                                                <Box className='Side'>
-                                                    <Box className="secondDataContent">
-                                                        <Box className='secondDataHead' sx={{ bgcolor: 'primary.light' }}><Typography>Transportation</Typography></Box>
-                                                        <div className="dataTwo"><Typography>{itinerary.transportation}</Typography></div>
+                                            <Box className="itineraryBody">
+                                                <Box className="itInfo"><Typography>{itinerary.description}</Typography></Box>
+
+                                                <Box className="itContent">
+                                                    <Box className='Side'>
+                                                        <Box className="basicData">
+                                                            <Box className="dataDetail">
+                                                                <Typography>Origin:</Typography>
+                                                                <Typography>{itinerary.origen}</Typography>
+                                                            </Box>
+                                                            <Box className="dataDetail">
+                                                                <Typography>Duration:</Typography>
+                                                                <Typography>{itinerary.duration} </Typography>
+                                                            </Box>
+                                                        </Box>
+                                                        <Box className="secondDataContent">
+                                                            <Box className='secondDataHead' sx={{ bgcolor: 'primary.light' }}><Typography>Transportation</Typography></Box>
+                                                            <div className="dataTwo"><Typography>{itinerary.transportation}</Typography></div>
+                                                        </Box>
+                                                        <Box className="secondDataContent">
+                                                            <Box className='secondDataHead' sx={{ bgcolor: 'primary.light' }}><Typography>Places To Visit</Typography></Box>
+                                                            <div className="dataTwo">
+                                                                <Typography>{itinerary.placesToVisit[0]}</Typography>
+                                                                <Typography>{itinerary.placesToVisit[1]} </Typography>
+                                                                <Typography>{itinerary.placesToVisit[2]} </Typography>
+                                                            </div>
+                                                        </Box>
                                                     </Box>
-                                                    <Box className="secondDataContent">
-                                                        <Box className='secondDataHead' sx={{ bgcolor: 'primary.light' }}><Typography>Places To Visit</Typography></Box>
-                                                        <div className="dataTwo">
-                                                            <Typography>{itinerary.placesToVisit[0]}</Typography>
-                                                            <Typography>{itinerary.placesToVisit[1]} </Typography>
-                                                            <Typography>{itinerary.placesToVisit[2]} </Typography>
+                                                    <Box className='rigthSide' >
+                                                        <div className='review'><Typography variant="h4">Review Update by:</Typography></div>
+
+                                                        <div className='info'>
+                                                            <div className='user'>
+                                                                <Avatar
+                                                                    alt={itinerary.collaborator}
+                                                                    src={itinerary.profilePic}
+                                                                    sx={{ width: 200, height: 200 }}
+                                                                />
+                                                                <Typography>{itinerary.collaborator}</Typography></div>
+
+                                                            <div className='social'>
+                                                                <Typography>{itinerary.hashtags}</Typography>
+                                                                <Likes />
+                                                            </div>
                                                         </div>
-                                                    </Box>
-                                                </Box>
-                                                <Box className='rigthSide'>
-                                                    <Box className="dataContentTree">
+                                                        <Box className="itineraryFooter">
+                                                            <Typography sx={{ color: "primary.dark" }}>Go to this adventure Just by: </Typography>
+                                                            <PriceContent price={itinerary.price} />
+                                                        </Box>
+                                                        {/* <Box className="dataContentTree">
                                                         <Box className='thirdDataHead' sx={{ bgcolor: 'primary.light' }}><Typography>Activities</Typography></Box>
                                                         <div className="dataThird"><Typography>{itinerary.activities} Under Construction</Typography></div>
-                                                    </Box>
+                                                    </Box> */}
 
+                                                    </Box>
                                                 </Box>
                                             </Box>
-                                        </Box>
-                                        <Box className='imageSuitcase'><img src={Suitcase} alt='suitcase icon' /></Box>
-                                        <Box className="itineraryFooter">
-                                            <div className='review'><Typography variant="h4">Review Update by:</Typography></div>
+                                            <Box className='imageSuitcase'><img src={Suitcase} alt='suitcase icon' /></Box>
 
-                                            <div className='info'>
-                                                <div className='user'>
-                                                    <Avatar
-                                                        alt={itinerary.collaborator}
-                                                        src={itinerary.profilePic}
-                                                        sx={{ width: 56, height: 56 }}
-                                                    />
-                                                    <Typography>{itinerary.collaborator}</Typography></div>
+                                        </AccordionDetails>
+                                    </Accordion>
+                                    < Box className="buttonBackContent" key={index + 1} ><Buttonback navigate={'/city/' + id} /></Box></>
+                            )
 
-                                                <div className='social'>
-                                                    <Typography>{itinerary.hashtags}</Typography>
-                                                    <Likes />
-                                                </div>
-                                            </div>
-                                        </Box>
-                                    </AccordionDetails>
-                                </Accordion>
-                                < Box className="buttonBackContent" key={index+1} ><Buttonback navigate={'/city/'+id}/></Box></>
-                        )
+                        }))
 
-                    }))
-                    
 
-                    :
-                    <Typography variant="h2" color="secondary.light">This City has not Itineraries Jet</Typography>
+                        :
+                        <Typography variant="h2" color="secondary.light">This City has not Itineraries Jet</Typography>
                 }
 
             </Container >

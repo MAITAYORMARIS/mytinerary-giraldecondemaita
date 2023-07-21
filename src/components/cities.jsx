@@ -62,7 +62,7 @@ function Cities() {
                             </CardActions>
                         </Card>)}
                     )
-                    : <Wait></Wait>
+                    : <Wait text={"Looking the most visit cities"}></Wait>
                     }
                 </div >
                 </Box>
