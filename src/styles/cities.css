@@ -22,6 +22,24 @@
   background-repeat: no-repeat;
   background-size: cover; 
 }
+.mirrow{
+    background-color: black;
+    opacity: 50%;
+    width: 100%;
+    height: 250px;
+    position: absolute;
+    left: 0%;
+}
+.bannerSearchCont{
+    width: 90%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    /* margin: 0% 5%; */
+}
 .form-control .me-2{
     height: 30px;
     width: 80%;
@@ -42,15 +60,10 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    column-gap: 10%;
-    row-gap: 20px;
+    column-gap: 6%;
+    row-gap: 32px;
     justify-content: center;
     align-items: center;
     margin-top: 10%;
-    
 }
 
-.contCard>img{
-    display: flex;
-    justify-content: flex-end;
-}

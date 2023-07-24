@@ -79,9 +79,9 @@ export default function ItinerariesList() {
 
                 <Banner city={city} />
                 <Box className="preview">
-                    <Typography variant="h2" color="primary.main">Tour {city.name}</Typography>
-                    <Typography variant="h3" sx={{ color: "secondary.dark" }}> Lovers of this city recommend </Typography>
-                    <Typography variant="h3" sx={{ color: "secondary.dark" }}> the best to see and visit</Typography>
+                    <Typography variant="h1" color="primary.main">Tour {city.name}</Typography>
+                    <Typography variant="h2" sx={{ color: "secondary.dark" }}> Lovers of this city recommend </Typography>
+                    <Typography variant="h2" sx={{ color: "secondary.dark" }}> the best to see and visit</Typography>
                     <Typography sx={{ color: "primary.dark" }}> Traveling is the only thing you buy and it makes you richer</Typography>
                 </Box>
                 {loading ? (<Loading sx={{ marginTop: '12vh' }} text={"Looking itineraries from travelers"} />)
@@ -104,8 +104,8 @@ export default function ItinerariesList() {
                                             <Box className="itineraryHead" sx={{ bgcolor: 'primary.ligth' }}>
                                                 <Box className="imageHead"><img className="galeryPic RotarDer" src={itinerary.image} alt={itinerary.name}></img></Box>
                                                 <Box className="contentHead">
-                                                    <Typography variant="h2" color="primary.main">Travel Itinerary</Typography>
-                                                    <Typography variant="h3" sx={{ color: "secondary.dark" }}>{itinerary.name}</Typography>
+                                                    <Typography variant="h1" color="primary.main">Travel Itinerary</Typography>
+                                                    <Typography variant="h2" sx={{ color: "secondary.dark" }}>{itinerary.name}</Typography>
 
 
 
@@ -143,7 +143,7 @@ export default function ItinerariesList() {
                                                         </Box>
                                                     </Box>
                                                     <Box className='rigthSide' >
-                                                        <div className='review'><Typography variant="h4">Review Update by:</Typography></div>
+                                                        <div className='review'><Typography variant="h3">Review Update by:</Typography></div>
 
                                                         <div className='info'>
                                                             <div className='user'>

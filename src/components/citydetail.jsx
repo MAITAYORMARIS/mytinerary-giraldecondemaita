@@ -64,17 +64,17 @@ export default function CityDetail() {
                             <Box className="tittleCity"
                                 sx={{ color: 'primary.main', width: '100%', height: 'auto', textAlign: 'right' }} >
 
-                                <Typography variant="h3" className="textEfect">{city[0].name}</Typography>
-                                <Typography variant="h4">{city[0].phrase}</Typography>
+                                <Typography variant="h2" className="textEfect">{city[0].name}</Typography>
+                                <Typography variant="h3">{city[0].phrase}</Typography>
                             </Box>
-                            <Box><Typography variant="h2" color="primary.main">Travel the World</Typography></Box>
-                            <Box sx={{ color: "secondary.dark" }}><Typography variant="h3">Discover {city[0].region}</Typography></Box>
+                            <Box><Typography variant="h1" color="primary.main">Travel the World</Typography></Box>
+                            <Box sx={{ color: "secondary.dark" }}><Typography variant="h2">Discover {city[0].region}</Typography></Box>
                             <Box className="infoCity" sx={{ height: 'auto', marginTop: '60px', width: '100%' }}>
 
                                 <Box className="data">
                                     <Typography variant="h3">{city[0].info}</Typography>
-                                    <Typography variant="h5">Country Oficial Name: {city[0].country} </Typography>
-                                    <Typography variant="h5">Language: {city[0].language}</Typography>
+                                    <Typography variant="h3">Country Oficial Name: {city[0].country} </Typography>
+                                    <Typography variant="h3">Language: {city[0].language}</Typography>
 
                                 </Box>
                                 <Box className="galery">
@@ -83,7 +83,7 @@ export default function CityDetail() {
                                     <div className="galeryPic RotarDer galDos"><img src={city[0].galDos} alt="vista de la ciudad"></img></div>
 
                                     <div className="galeryPic RotarIzq galTres"><img src={city[0].galTres} alt="vista de la ciudad"></img>
-                                        <Typography variant="h6" className="notes">My travel to {city[0].name}</Typography></div>
+                                        <Typography variant="h5" className="notes">My travel to {city[0].name}</Typography></div>
                                 </Box>
 
                             </Box>
@@ -93,8 +93,8 @@ export default function CityDetail() {
                                 <Box className="curveThird"><img src={SVGImage} alt="irregularForm3"></img></Box>
                             </Box>
                             <Box sx={{ height: '300px', marginTop: '60px', width: '100%' }}>
-                                <Typography variant="h2" color="primary.main">Tour the City</Typography>
-                                <Typography variant="h3" color="secondary.light">Go to Know the Itineraries that other travelers recommend</Typography>
+                                <Typography variant="h1" color="primary.main">Tour the City</Typography>
+                                <Typography variant="h2" color="secondary.light">Go to Know the Itineraries that other travelers recommend</Typography>
                                 <LinkRouter to={'/itineraries/cities/' + city[0]._id}>
                                     <Button size="small">Watch Itineraries</Button>
                                 </LinkRouter>

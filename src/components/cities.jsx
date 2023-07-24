@@ -13,59 +13,69 @@ import SearchInput from './searchCities';
 import { useSelector, useDispatch } from 'react-redux';
 import citiesActions from '../reduxContext/actions/citiesActions';
 import Wait from './buttonCall'
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 
 function Cities() {
     const dispatch = useDispatch()
 
     let searchResult = useSelector(store => store.citiesReducer.searchResult)
-  
 
-   const cities = useSelector(store => store.citiesReducer.cities)
- 
+
+    const cities = useSelector(store => store.citiesReducer.cities)
+
     useEffect(() => {
         dispatch(citiesActions.getCities())
     }, [])
 
     return (
         <>
-        <Box className="citiesContent">
-            <Box className="bannerSearch">
-                <Typography variant="h3">The World awaits</Typography>
-                <Typography variant="h4">Find your next destination</Typography>
-                <SearchInput cities={cities} />
-            </Box>
-            <div className='contCard'>
-                {cities.length > 0 ?
-
-                    searchResult.map((city, index) =>{
-                        return (
-
-                        <Card sx={{ width: "30%", heigth: "350", maxHeight: "350" }} key={index}>
-                            <CardMedia
-                                sx={{ height: '140px' }}
-                                image={city.image}
-                                title={city.name}
-                            />
-                            <CardContent>
-                                <Typography gutterBottom component="div">
-                                    {city.name}
-                                </Typography>
-                                <Typography variant="body2" color="text.secondary">
-                                    {city.phrase}
-                                </Typography>
-                            </CardContent>
-                            <CardActions>
-                                <LinkRouter key={index} to={'/city/' + city._id}>
-                                    <Button size="small">Read More</Button>
-                                </LinkRouter>
-                            </CardActions>
-                        </Card>)}
-                    )
-                    : <Wait text={"Looking the most visit cities"}></Wait>
-                    }
-                </div >
+            <Box className="citiesContent">
+                <Box className="bannerSearch">
+                    <div class="mirrow"></div>
+                    <div className="bannerSearchCont">
+                        <Typography variant="h2">The World awaits</Typography>
+                        <Typography variant="h3">Find your next destination</Typography>
+                        <SearchInput cities={cities} />
+                    </div>
                 </Box>
+                <Typography variant="h2" sx={{ color: 'primary.main' }}>Come to Know the Cities that other travelers Love</Typography>
+
+                <div className='contCard'>
+
+                    {cities.length > 0 ?
+
+                        searchResult.map((city, index) => {
+                            return (
+                                <>
+                                    <Card sx={{ width: "calc(100%/4)", height: "350px" }} key={index}>
+                                        <CardMedia
+                                            sx={{ height: '270px' }}
+                                            image={city.image}
+                                            alt={city.name}
+                                        />
+
+                                        <CardContent
+                                            sx={{ height: '50px', padding: '10px' }}>
+                                            <Typography gutterBottom component="div">
+                                                {city.name}
+                                            </Typography>
+                                        </CardContent>
+                                        <CardActions sx={{ height: '20px', padding: '5px', textAlign: 'right' }}>
+                                            <LinkRouter key={index} to={'/city/' + city._id}>
+                                                <Button size="small">Read More</Button><ArrowForwardIcon sx={{ color: 'primary.main' }} />
+                                            </LinkRouter>
+                                        </CardActions>
+                                    </Card >
+
+                                </>)
+                        }
+                        )
+                        : <Wait text={"Looking the most visit cities"}></Wait>
+
+                    }</div>
+
+            </Box >
 
 
         </>

@@ -34,20 +34,20 @@ export default function Carousel() {
     const progressContent = useRef(null);
     const onAutoplayTimeLeft = (s, time, progress) => {
         progressCircle.current.style.setProperty('--progress', 1 - progress);
-        progressContent.current.textContent = `${Math.ceil(time / 1000)}s`;
+        progressContent.current.textContent = `${Math.ceil(time / 1500)}s`;
     };
     return (
         <>
             <ThemeProvider theme={Theme.palette}>
                 <div className='carouselContain'>
                     <div className='carouselTittle'>
-                        <Typography variant="h2" color="primary.dark">Popular MYtineraries</Typography>
+                        <Typography variant="h1" color="primary.dark">Popular MYtineraries</Typography>
                     </div>
                     <Swiper
-                        spaceBetween={30}
+                        spaceBetween={40}
                         centeredSlides={true}
                         autoplay={{
-                            delay: 2500,
+                            delay:3000,
                             disableOnInteraction: false,
                         }}
                         pagination={{
