@@ -2,18 +2,18 @@ import * as React from 'react';
 import { useEffect } from 'react';
 import '../styles/cities.css';
 import { Link as LinkRouter } from 'react-router-dom';
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Button from '@mui/material/Button';
+// import Card from '@mui/material/Card';
+// import CardActions from '@mui/material/CardActions';
+// import CardContent from '@mui/material/CardContent';
+// import CardMedia from '@mui/material/CardMedia';
+import Button from 'react-bootstrap/Button';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import SearchInput from './searchCities';
 import { useSelector, useDispatch } from 'react-redux';
 import citiesActions from '../reduxContext/actions/citiesActions';
 import Wait from './buttonCall'
-import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import ButtonTop from './buttonTop'
 
 
 function Cities() {
@@ -48,7 +48,19 @@ function Cities() {
                         searchResult.map((city, index) => {
                             return (
                                 <>
-                                    <Card sx={{ width: "calc(100%/4)", height: "350px" }} key={index}>
+                                    <div className="card" key={index}>
+                                        <div className="cardImgContent"><img src={city.image} alt={city.name} /></div>
+                                        <div className="geometricB"></div>
+                                        <div className="geometricA"></div>
+                                        <div className="title-slide-item">{city.name}</div>
+                                        <div className='buttonCard' sx={{color:"secondary.dark"}}>
+                                        <LinkRouter key={index} to={'/city/' + city._id} style={{ textDecoration: 'none'}}>
+                                            <Button className='cardbtn'>Read More</Button>
+                                        </LinkRouter>
+                                        </div>
+
+                                    </div>
+                                    {/* <Card sx={{ width: "calc(100%/4)", height: "350px" }} key={index}>
                                         <CardMedia
                                             sx={{ height: '270px' }}
                                             image={city.image}
@@ -66,8 +78,8 @@ function Cities() {
                                                 <Button size="small">Read More</Button><ArrowForwardIcon sx={{ color: 'primary.main' }} />
                                             </LinkRouter>
                                         </CardActions>
-                                    </Card >
-
+                                    </Card > */}
+<ButtonTop />
                                 </>)
                         }
                         )
