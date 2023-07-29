@@ -10,9 +10,9 @@ import SVGImageThird from '../images/img3.svg'
 import Buttonback from './buttontohome'
 import Loading from './buttonCall'
 import { Link as LinkRouter } from 'react-router-dom';
-import Button from '@mui/material/Button';
+// import Button from '@mui/material/Button';
 import Banner from './cityBanner'
-
+import Button from 'react-bootstrap/Button';
 
 
 
@@ -52,19 +52,12 @@ export default function CityDetail() {
                 <Container maxWidth="xl" className="detailContain" sx={{ padding: '0' }}>
                     {city.length > 0 ?
                         <>
-                            {/* <Box className="bannerCity"
-                                sx={{ minWidth: '100%', height: '70vh', textAlign: 'right' }} >
-                                
-                                <Box className="bannerContent"><img className="titleImage" src={city[0].banner} alt={city[0].name} /></Box>
-                                <Box className="curveOne"><img src={SVGImageTwo} className="SVGcolor" alt="irregularForm"></img></Box>
-                                <Box className="curveTwo"><img src={SVGImageThird} alt="irregularForm2"></img></Box>
-                                <Box className="curveThird"><img src={SVGImage} alt="irregularForm3"></img></Box>
-                            </Box> */}
+                           
                             <Banner city={city[0]} />
                             <Box className="tittleCity"
                                 sx={{ color: 'primary.main', width: '100%', height: 'auto', textAlign: 'right' }} >
 
-                                <Typography variant="h2" className="textEfect">{city[0].name}</Typography>
+                                <Typography variant="h2" >{city[0].name}</Typography>
                                 <Typography variant="h3">{city[0].phrase}</Typography>
                             </Box>
                             <Box><Typography variant="h1" color="primary.main">Travel the World</Typography></Box>
@@ -73,8 +66,16 @@ export default function CityDetail() {
 
                                 <Box className="data">
                                     <Typography variant="h3">{city[0].info}</Typography>
-                                    <Typography variant="h3">Country Oficial Name: {city[0].country} </Typography>
+                                    <div className="dataIcon">
+                                        <Typography variant="h3">Country Oficial Name:{city[0].country}</Typography>
+                                        <img src={city[0].flag} alt="flag"></img>
+
+                                    </div>
+
                                     <Typography variant="h3">Language: {city[0].language}</Typography>
+                                    <div className="dataIcon">
+                                        <Typography variant="h3">National Coin: {city[0].nationalCoin}</Typography>
+                                        <img src={city[0].coinIcon} alt="icon of coin"></img></div>
 
                                 </Box>
                                 <Box className="galery">
@@ -92,19 +93,22 @@ export default function CityDetail() {
                                 <Box className="curveTwo"><img src={SVGImageThird} alt="irregularForm2"></img></Box>
                                 <Box className="curveThird"><img src={SVGImage} alt="irregularForm3"></img></Box>
                             </Box>
-                            <Box sx={{ height: '300px', marginTop: '60px', width: '100%' }}>
+                            <Box sx={{ height: '300px', marginTop: '35px', width: '100%' }}>
                                 <Typography variant="h1" color="primary.main">Tour the City</Typography>
                                 <Typography variant="h2" color="secondary.light">Go to Know the Itineraries that other travelers recommend</Typography>
+                                <div className="buttonItinerariesContent">
                                 <LinkRouter to={'/itineraries/cities/' + city[0]._id}>
-                                    <Button size="small">Watch Itineraries</Button>
+                                    <Button size="small" className="callTwo">Watch Itineraries</Button>
                                 </LinkRouter>
+                                </div>
+                                
 
                                 {/* <Typography variant="h4" color="secondary.light">UNDER CONSTRUCTION</Typography> */}
 
                             </Box>
                             <Box className="buttonBackContent"><Buttonback navigate={'/cities'} /></Box></>
 
-                        : <Loading text={"Searching more info from this city"} />}
+                        : <div className="loadItinerary"><Loading text={"Searching more info from this city"} /></div>}
 
                 </Container>
             </React.Fragment>
