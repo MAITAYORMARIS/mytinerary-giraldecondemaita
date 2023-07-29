@@ -12,6 +12,7 @@ palette:{
         main: '#ff6d00',
         light: orange[200],
         dark:orange[900],
+        contrastText: '#fff',
     },
     secondary:{
         main: blue[600],
@@ -38,6 +39,15 @@ palette:{
 typography:{
     fontFamily:["'Hind Guntur', sans-serif"],
     fontSize:20,
+    '@media (max-width:600px)': {
+      fontSize: 12,
+    },
+    '@media (min-width:601px) and (max-width:960px)': {
+      fontSize: 15,
+    },
+    '@media (min-width:1440px)': {
+      fontSize: 22,
+    },
     h1:{
         fontFamily:["'Mr Dafoe', cursive"],
         letterSpacing:"0.02em",

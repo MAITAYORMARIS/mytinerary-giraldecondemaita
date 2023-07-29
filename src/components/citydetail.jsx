@@ -93,7 +93,7 @@ export default function CityDetail() {
                                 <Box className="curveTwo"><img src={SVGImageThird} alt="irregularForm2"></img></Box>
                                 <Box className="curveThird"><img src={SVGImage} alt="irregularForm3"></img></Box>
                             </Box>
-                            <Box sx={{ height: '300px', marginTop: '35px', width: '100%' }}>
+                            <Box sx={{ height: '300px', marginTop: '3px', width: '100%' }}>
                                 <Typography variant="h1" color="primary.main">Tour the City</Typography>
                                 <Typography variant="h2" color="secondary.light">Go to Know the Itineraries that other travelers recommend</Typography>
                                 <div className="buttonItinerariesContent">

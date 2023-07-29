@@ -32,7 +32,7 @@ function Cities() {
         <>
             <Box className="citiesContent">
                 <Box className="bannerSearch">
-                    <div class="mirrow"></div>
+                    <div className="mirrow"></div>
                     <div className="bannerSearchCont">
                         <Typography variant="h2">The World awaits</Typography>
                         <Typography variant="h3">Find your next destination</Typography>
@@ -47,7 +47,7 @@ function Cities() {
 
                         searchResult.map((city, index) => {
                             return (
-                                <>
+                                
                                     <div className="card" key={index}>
                                         <div className="cardImgContent"><img src={city.image} alt={city.name} /></div>
                                         <div className="geometricB"></div>
@@ -60,32 +60,18 @@ function Cities() {
                                         </div>
 
                                     </div>
-                                    {/* <Card sx={{ width: "calc(100%/4)", height: "350px" }} key={index}>
-                                        <CardMedia
-                                            sx={{ height: '270px' }}
-                                            image={city.image}
-                                            alt={city.name}
-                                        />
-
-                                        <CardContent
-                                            sx={{ height: '50px', padding: '10px' }}>
-                                            <Typography gutterBottom component="div">
-                                                {city.name}
-                                            </Typography>
-                                        </CardContent>
-                                        <CardActions sx={{ height: '20px', padding: '5px', textAlign: 'right' }}>
-                                            <LinkRouter key={index} to={'/city/' + city._id}>
-                                                <Button size="small">Read More</Button><ArrowForwardIcon sx={{ color: 'primary.main' }} />
-                                            </LinkRouter>
-                                        </CardActions>
-                                    </Card > */}
-                                    <ButtonTop />
-                                </>)
+                        
+                                    
+                                )
                         }
+                        
                         )
+                        
                         : <Wait text={"Looking the most visit cities"}></Wait>
 
-                    }</div>
+                    }
+                    <ButtonTop />
+                    </div>
 
             </Box >
 

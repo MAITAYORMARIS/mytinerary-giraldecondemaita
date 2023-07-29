@@ -49,7 +49,7 @@ function NavBar() {
 
   return (
     <>
-      <AppBar position="fixed">
+      <AppBar position="fixed" sx={{left:'0', right:'auto'}}>
         <Container maxWidth="xl">
           <Toolbar disableGutters>
           <div className='logo'><Link to='/'><img  src={logo} alt='logo' ></img></Link></div>
