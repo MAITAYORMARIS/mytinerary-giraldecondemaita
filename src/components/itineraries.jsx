@@ -17,7 +17,8 @@ import Banner from './cityBanner'
 import Suitcase from '../images/maletas.png'
 import Direction from '../images/brujula.png'
 import Plane from '../images/de-viaje.png'
-import Line from '../images/flecha-curva-con-linea-discontinua.png'
+import Line from '../images/pngegg.png'
+import Curve from '../images/mark_1768904.png'
 import Loading from './buttonCall'
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
@@ -146,7 +147,7 @@ export default function ItinerariesList() {
                                                         </Box>
                                                     </Box>
                                                     <Box className='rigthSide'>
-                                                        <Box className='rigthSideTitle' sx={{ bgcolor: 'primary.dark' }}> <Typography variant="h2" >Our Travelers Talk</Typography></Box>
+                                                        <Box className='rigthSideTitle' sx={{ bgcolor: 'primary.main'}}> <Typography variant="h2" >Our Travelers Talk</Typography></Box>
 
                                                         <div className='user'>
                                                             <Avatar
@@ -156,15 +157,15 @@ export default function ItinerariesList() {
                                                             />
                                     
                                                         </div>
-                                                        <Typography>Review from:{itinerary.collaborator}</Typography>
+                                                        <Typography sx={{ fontWeight:'bold' }}>Review from:{itinerary.collaborator}</Typography>
                                                             <Typography>I really enjoy traveling across {city.name}</Typography>
 
-                                                        <Box className='info' sx={{ bgcolor: 'primary.light' }}>
-                                                            <Typography sx={{ color: 'primary.dark' }}> About this Itinerary</Typography>
+                                                        <Box className='info'>
+                                                            <Typography sx={{ color: 'primary.dark', fontWeight:'bold'  }}> About this Itinerary</Typography>
                                                             <Typography>{itinerary.description}</Typography>
                                                             <div className='social' >
-                                                                <div className='likesContent'><Likes /><Typography>Likes</Typography></div>
-                                                                <Typography>{itinerary.hashtags}</Typography>
+                                                                <div className='likesContent'><Likes /></div>
+                                                                <div className='hashContent'><Typography sx={{ fontFamily:'cursive' }}>{itinerary.hashtags}</Typography></div>
                                                             </div>
                                                             <div className="itineraryFooter">
                                                                 <Typography sx={{ color: "primary.dark" }}>Go to this adventure Just by: </Typography>
