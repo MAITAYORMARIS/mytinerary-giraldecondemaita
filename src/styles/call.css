@@ -33,7 +33,7 @@
 }
 
 
-.callTwo::before {
+/* .callTwo::before {
   content: '';
   border-radius: 1000px;
   min-width: calc(300px + 35px);
@@ -47,7 +47,7 @@
   opacity: 0;
   transition: all .3s ease-in-out 0s;
   text-justify: unset;
-}
+} */
 
 .callTwo:hover,
 .callTwo:focus {

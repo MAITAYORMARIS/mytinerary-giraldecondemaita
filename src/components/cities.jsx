@@ -39,7 +39,7 @@ function Cities() {
                         <SearchInput cities={cities} />
                     </div>
                 </Box>
-                <Typography variant="h2" sx={{ color: 'primary.main' }}>Come to Know the Cities that other travelers Love</Typography>
+                <Typography variant="h2" sx={{ color: 'primary.main' }}> Come to Know the Cities that other travelers Love</Typography>
 
                 <div className='contCard'>
 
@@ -53,10 +53,10 @@ function Cities() {
                                         <div className="geometricB"></div>
                                         <div className="geometricA"></div>
                                         <div className="title-slide-item">{city.name}</div>
-                                        <div className='buttonCard' sx={{color:"secondary.dark"}}>
-                                        <LinkRouter key={index} to={'/city/' + city._id} style={{ textDecoration: 'none'}}>
-                                            <Button className='cardbtn'>Read More</Button>
-                                        </LinkRouter>
+                                        <div className='buttonCard' sx={{ color: "secondary.dark" }}>
+                                            <LinkRouter key={index} to={'/city/' + city._id} style={{ textDecoration: 'none' }}>
+                                                <Button className='cardbtn'>Read More</Button>
+                                            </LinkRouter>
                                         </div>
 
                                     </div>
@@ -79,7 +79,7 @@ function Cities() {
                                             </LinkRouter>
                                         </CardActions>
                                     </Card > */}
-<ButtonTop />
+                                    <ButtonTop />
                                 </>)
                         }
                         )
