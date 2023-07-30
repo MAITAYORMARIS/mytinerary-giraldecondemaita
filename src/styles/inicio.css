@@ -1,0 +1,18 @@
+.logo{
+    height: 11vh;
+    width:80px;
+    color:wh
+}
+.logo img{
+    height: 100%;
+    width: 100%;
+}
+@media screen and (max-width:600px) {
+    .logo{
+display:none;
+}}
+
+@media screen and (min-width:601px) and (max-width:960px) {
+    .logo{
+        display:none;
+        }}

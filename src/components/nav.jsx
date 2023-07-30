@@ -7,13 +7,16 @@ import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
-
+import logo from '../images/LOGO.png'
 import AccountCircle from '@mui/icons-material/AccountCircle';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 // import AdbIcon from '@mui/icons-material/Adb';
 import { Link as LinkRouter } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import '../styles/inicio.css'
+
 
 
 const pages =
@@ -23,7 +26,7 @@ const pages =
     path: '/cities'
   }
   ]
-const settings = ['Sign In', 'LogIn', 'Logout'];
+const settings = ['SignIn', 'LogIn', 'Logout'];
 
 function NavBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -46,12 +49,13 @@ function NavBar() {
 
   return (
     <>
-      <AppBar position="fixed">
+      <AppBar position="fixed" sx={{left:'0', right:'auto'}}>
         <Container maxWidth="xl">
           <Toolbar disableGutters>
-            {/* <AdbIcon sx={{ display: { xs: 'none', md: 'none' }, mr: 1 }} /> */}
+          <div className='logo'><Link to='/'><img  src={logo} alt='logo' ></img></Link></div>
+            
             <Typography
-              variant="h6"
+              variant="h4"
               noWrap
               component={LinkRouter}
               to="/"
@@ -100,7 +104,7 @@ function NavBar() {
                 {pages.map((page) => (
                   <MenuItem key={page.path} onClick={handleCloseNavMenu}>
                     <Typography
-                      variant="h6"
+                      variant="h4"
                       textAlign="center"
                       component={LinkRouter}
                       to={page.path}>{page.name}</Typography>
@@ -108,9 +112,11 @@ function NavBar() {
                 ))}
               </Menu>
             </Box>
+            
+            {/* <div sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }}><img src={logo} alt='logo'></img></div> */}
             {/* <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} /> */}
             <Typography
-              variant="h5"
+              variant="h4"
               noWrap
               component={LinkRouter}
               to="/"

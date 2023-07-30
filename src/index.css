@@ -2,8 +2,8 @@ body {
   margin: 0;
   box-sizing: border-box;
   padding: 0;
-  font-family: 'Fira Sans', 'Mr Dafoe', 'Nanum Gothic','La Belle Aurore', 
-    'Saira Extra Condensed','Marcellus SC', serif,cursive,sans-serif;
+  font-family: 'Mr Dafoe', 'Hind Guntur','La Belle Aurore', 
+    'Inknut Antiqua', serif,cursive,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -12,9 +12,7 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-/* font-family: 'Fira Sans', sans-serif;
-font-family: 'La Belle Aurore', cursive;
-font-family: 'Marcellus SC', serif;
-font-family: 'Mr Dafoe', cursive;
-font-family: 'Nanum Gothic', sans-serif;
-font-family: 'Saira Extra Condensed', sans-serif; */
+/* font-family: 'Hind Guntur', sans-serif; typografy
+font-family: 'Inknut Antiqua', serif; subtitulos
+font-family: 'La Belle Aurore', cursive; manuscrit
+font-family: 'Mr Dafoe', cursive; titulos */
