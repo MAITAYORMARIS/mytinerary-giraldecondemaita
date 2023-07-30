@@ -8,12 +8,14 @@ import Itineraries from "./components/itineraries";
 import { Routes, Route } from 'react-router-dom';
 import {ThemeProvider} from '@mui/material/styles';
 import theme from './components/themeConfig'
+import ScrollToTop from './components/scrollToTop';
 
 function App() {
   return (
     <div>
       <ThemeProvider theme={theme}>
       <NavBar />
+      <ScrollToTop /> 
       <Routes>
         <Route path="*" element={<Inicio />}></Route>
         <Route path='/home' element={<Inicio />}></Route>

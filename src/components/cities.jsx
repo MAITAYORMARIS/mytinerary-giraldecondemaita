@@ -2,10 +2,6 @@ import * as React from 'react';
 import { useEffect } from 'react';
 import '../styles/cities.css';
 import { Link as LinkRouter } from 'react-router-dom';
-// import Card from '@mui/material/Card';
-// import CardActions from '@mui/material/CardActions';
-// import CardContent from '@mui/material/CardContent';
-// import CardMedia from '@mui/material/CardMedia';
 import Button from 'react-bootstrap/Button';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
@@ -27,6 +23,7 @@ function Cities() {
     useEffect(() => {
         dispatch(citiesActions.getCities())
     }, [])
+    
 
     return (
         <>
@@ -67,7 +64,7 @@ function Cities() {
                         
                         )
                         
-                        : <Wait text={"Looking the most visit cities"}></Wait>
+                        : <div className="contentWaitCities"><Wait text={"Looking the most visit cities"}></Wait></div>
 
                     }
                     <ButtonTop />

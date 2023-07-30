@@ -66,6 +66,15 @@
     align-items: center;
     margin-top: 10%;
 }
+.contentWaitCities{
+    width:100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 400px;
+}
 
 .card{
     width: calc(90%/4); 
